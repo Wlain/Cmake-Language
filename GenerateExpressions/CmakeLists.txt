@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.5)
+project(GeneratorExpressions)
+
+# If no build type is specified, make it Release
+if (NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release)
+endif()
+
+# Create a static library call mylib
+add_library(mylib STATIC
+  mylib.cpp
+  mylib.h
+)
+
+# Using a generator ezpression in OUTPUT_NAME property of mylib to contain the configuration name (Debug, Release...)
+
+set_property(TARGET mylib
+  PROPERTY OUTPUT_NAME "mylib$<CONFIG>"
+) 
+

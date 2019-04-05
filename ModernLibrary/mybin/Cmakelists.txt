@@ -1,0 +1,4 @@
+add_executable(mybin helloworld.cpp)
+
+target_link_libraries(mybin PRIVATE mylib)
+

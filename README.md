@@ -1,2 +1,1 @@
-# Cmake-Language
-a exercise of Cmake Language
+### a sample of Cmake language
